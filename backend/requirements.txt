@@ -1,0 +1,12 @@
+fastapi[standard]
+pydantic
+passlib[bcrypt]
+python-jose
+typing
+python-dotenv
+pytest
+httpx
+pyjwt
+sqlalchemy
+python-multipart
+
