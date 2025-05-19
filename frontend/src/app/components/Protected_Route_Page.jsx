@@ -11,7 +11,7 @@ const Protected_Route_Page = () => {
   useEffect(() => {
     const token = localStorage.getItem('token')
     if (!token) {
-      router.push('/')
+      router.push('/unauthorized')
       return
     }
 
@@ -21,12 +21,12 @@ const Protected_Route_Page = () => {
       },
     })
       .then(res => setUser(res.data))
-      .catch(() => router.push('/'))
+      .catch(() => router.push('/unauthorized'))
   }, [])
 
   const handleLogout = () => {
     localStorage.removeItem('token')
-    router.push('/')
+    router.push('/login')
   }
 
   if (!user) {
